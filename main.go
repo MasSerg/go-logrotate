@@ -9,11 +9,16 @@ import (
 	"os"
 	"strings"
 	"time"
+	"path/filepath"
 )
 
 func main() {
 
-	err := godotenv.Load()
+	// Get the directory of the currently running file
+	dir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
+
+	// Set path to .env file and get values
+	err := godotenv.Load(dir+"/.env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
