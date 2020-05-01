@@ -11,11 +11,6 @@ pipeline {
         sh 'go build'
       }
     }
-    stage('env') {
-      steps {
-        sh 'cp ./.env-dist ./.env'
-      }
-    }
     stage('go go-logrotate') {
       steps {
         sh './go-logrotate_master'
