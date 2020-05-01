@@ -2,6 +2,7 @@ pipeline {
   agent any
   environment {
     WORKSPACE = '/home/deploy/jenkins'
+    JENKINS_HOME = '/home/deploy/jenkins'
     }
   stages {
     stage('go get') {
