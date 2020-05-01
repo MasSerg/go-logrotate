@@ -9,7 +9,7 @@ pipeline {
     }
     stage('go go-logrotate') {
       steps {
-        sh './go-logrotate'
+        sh './go-logrotate_master'
       }
     }
   }
