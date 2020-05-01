@@ -5,6 +5,13 @@ pipeline {
     JENKINS_HOME = '/home/deploy/jenkins'
     }
   stages {
+    stage('Change working directory...') {
+      steps {
+        dir('/home/deploy/jenkins') {
+          sh 'pwd'
+        }
+      }
+    }
     stage('go get') {
       steps {
         sh 'go get -d ./'
