@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Change working directory...') {
       steps {
-        dir('/home/deploy/jenkins/') {
+        dir('/home/deploy/jenkins/project') {
           sh 'pwd'
         }
       }
