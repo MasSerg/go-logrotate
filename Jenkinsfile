@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    WORKSPACE = /home/deploy/go-logrotate
+    }
   stages {
     stage('go get') {
       steps {
