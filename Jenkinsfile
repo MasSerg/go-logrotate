@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    WORKSPACE = '/home/deploy/go-logrotate'
+    WORKSPACE = '/home/deploy/jenkins'
     }
   stages {
     stage('go get') {
