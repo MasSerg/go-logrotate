@@ -1,15 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('composer install') {
+    stage('go build') {
       steps {
-        sh 'composer install'
+        sh 'go build'
       }
     }
-    stage('docker build & up') {
+    stage('go go-logrotate') {
       steps {
-        sh 'docker-compose build'
-        sh 'docker-compose up -d'
+        sh 'go go-logrotate'
       }
     }
   }
